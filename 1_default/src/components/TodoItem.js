@@ -3,10 +3,17 @@ import React from 'react';
 import InputField from './InputField';
 
 export default class TodoItem extends React.Component {
+  static propTypes = {
+    title: React.PropTypes.string.isRequired,
+    completed: React.PropTypes.bool.isRequired,
+    onUpdate: React.PropTypes.func,
+    onToggle: React.PropTypes.func,
+    onDelete: React.PropTypes.func
+  };
+
   constructor(props, context) {
     super(props, context);
     this.state = { editable: false };
-    this.toggleEditMode = this.toggleEditMode.bind(this);
   }
 
   toggleEditMode() {
@@ -27,7 +34,7 @@ export default class TodoItem extends React.Component {
           checked={completed}
           onChange={() => onToggle && onToggle(!completed)}
         />
-        <span onDoubleClick={this.toggleEditMode}>{title}</span>
+        <span onDoubleClick={::this.toggleEditMode}>{title}</span>
         <button onClick={() => onDelete && onDelete()}>x</button>
       </div>
     );
@@ -40,7 +47,7 @@ export default class TodoItem extends React.Component {
         autoFocus
         placeholder="編輯待辦事項"
         value={title}
-        onBlur={this.toggleEditMode}
+        onBlur={::this.toggleEditMode}
         onKeyDown={(e) => {
           if (e.keyCode === 27) {
             e.preventDefault();
@@ -61,11 +68,3 @@ export default class TodoItem extends React.Component {
       this.renderViewMode();
   }
 }
-
-TodoItem.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  completed: React.PropTypes.bool.isRequired,
-  onUpdate: React.PropTypes.func,
-  onToggle: React.PropTypes.func,
-  onDelete: React.PropTypes.func
-};

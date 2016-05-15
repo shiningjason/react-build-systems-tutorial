@@ -2,7 +2,14 @@ import React from 'react';
 
 import TodoItem from './TodoItem';
 
-class TodoList extends React.Component {
+export default class TodoList extends React.Component {
+  static propTypes = {
+    todos: React.PropTypes.object.isRequired,
+    onUpdateTodo: React.PropTypes.func,
+    onToggleTodo: React.PropTypes.func,
+    onDeleteTodo: React.PropTypes.func
+  };
+
   render() {
     const {
       todos,
@@ -24,10 +31,3 @@ class TodoList extends React.Component {
     return <ul>{todoElements}</ul>;
   }
 }
-
-TodoList.propTypes = {
-  todos: React.PropTypes.object.isRequired,
-  onUpdateTodo: React.PropTypes.func,
-  onToggleTodo: React.PropTypes.func,
-  onDeleteTodo: React.PropTypes.func
-};

@@ -1,11 +1,13 @@
 import React from 'react';
 
 export default class InputField extends React.Component {
+  static propTypes = {
+    onSubmitEditing: React.PropTypes.func
+  };
+
   constructor(props, context) {
     super(props, context);
     this.state = { value: props.value || '' };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
   handleChange(e) {
@@ -35,13 +37,9 @@ export default class InputField extends React.Component {
         {...this.props}
         type="text"
         value={this.state.value}
-        onChange={this.handleChange}
-        onKeyDown={this.handleKeyDown}
+        onChange={::this.handleChange}
+        onKeyDown={::this.handleKeyDown}
       />
     );
   }
 }
-
-InputField.propTypes = {
-  onSubmitEditing: React.PropTypes.func
-};
