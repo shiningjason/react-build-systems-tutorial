@@ -1,6 +1,8 @@
-const { InputField } = window.App;
+import React from 'react';
 
-class TodoItem extends React.Component {
+import InputField from './InputField';
+
+export default class TodoItem extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = { editable: false };
@@ -67,5 +69,3 @@ TodoItem.propTypes = {
   onToggle: React.PropTypes.func,
   onDelete: React.PropTypes.func
 };
-
-window.App.TodoItem = TodoItem;

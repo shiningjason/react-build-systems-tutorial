@@ -1,9 +1,8 @@
-const { connect } = ReactRedux;
+import React from 'react';
+import { connect } from 'react-redux';
 
-const {
-  TodoActions,
-  TodoList
-} = window.App;
+import TodoList from './TodoList';
+import TodoActions from '../actions/TodoActions';
 
 class TodoListContainer extends React.Component {
   render() {
@@ -24,7 +23,7 @@ class TodoListContainer extends React.Component {
   }
 }
 
-window.App.TodoListContainer = connect(
+export default connect(
   (state) => ({ todos: state.todos }),
   {
     updateTodo: TodoActions.updateTodo,

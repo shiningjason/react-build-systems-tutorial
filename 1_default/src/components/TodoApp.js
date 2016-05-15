@@ -1,10 +1,10 @@
-const { connect } = ReactRedux;
-const {
-  TodoActions,
-  CreateTodoFieldContainer,
-  TodoHeaderContainer,
-  TodoListContainer
-} = window.App;
+import React from 'react';
+import { connect } from 'react-redux';
+
+import CreateTodoFieldContainer from './CreateTodoFieldContainer';
+import TodoHeaderContainer from './TodoHeaderContainer';
+import TodoListContainer from './TodoListContainer';
+import TodoActions from '../actions/TodoActions';
 
 class TodoApp extends React.Component {
   componentDidMount() {
@@ -22,6 +22,6 @@ class TodoApp extends React.Component {
   }
 }
 
-window.App.TodoApp = connect(undefined, {
+export default connect(undefined, {
   loadTodos: TodoActions.loadTodos
 })(TodoApp);

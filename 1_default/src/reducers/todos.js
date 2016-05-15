@@ -1,6 +1,6 @@
-const { List, Record } = Immutable;
+import { List, Record } from 'immutable';
 
-const { ActionTypes } = window.App;
+import ActionTypes from '../constants/ActionTypes';
 
 const TodoRecord = Record({
   id: undefined,
@@ -26,7 +26,7 @@ const _toggleTodo = (todos, id, completed) =>
 const _deleteTodo = (todos, id) =>
   todos.delete(_findIdxById(todos, id));
 
-window.App.reducers.todos = (state = new List(), action) => {
+export default (state = new List(), action) => {
   switch (action.type) {
     case ActionTypes.LOAD_TODOS_SUCCESS:
       return new List(action.todos).map((todo) => new TodoRecord(todo));

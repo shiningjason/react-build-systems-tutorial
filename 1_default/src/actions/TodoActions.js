@@ -1,6 +1,6 @@
-const { ActionTypes } = window.App;
+import ActionTypes from '../constants/ActionTypes';
 
-window.App.TodoActions = {
+export default {
   loadTodos() {
     return (dispatch) => {
       fetch('./todos.json')

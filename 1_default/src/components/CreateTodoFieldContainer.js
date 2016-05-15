@@ -1,9 +1,8 @@
-const { connect } = ReactRedux;
+import React from 'react';
+import { connect } from 'react-redux';
 
-const {
-  TodoActions,
-  InputField
-} = window.App;
+import InputField from './InputField';
+import TodoActions from '../actions/TodoActions';
 
 class CreateTodoFieldContainer extends React.Component {
   render() {
@@ -16,6 +15,6 @@ class CreateTodoFieldContainer extends React.Component {
   }
 }
 
-window.App.CreateTodoFieldContainer = connect(undefined, {
+export default connect(undefined, {
   createTodo: TodoActions.createTodo
 })(CreateTodoFieldContainer);

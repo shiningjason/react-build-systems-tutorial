@@ -1,1 +1,5 @@
-window.App.reducers = {};
+import todos from './todos';
+
+export default {
+  todos
+};

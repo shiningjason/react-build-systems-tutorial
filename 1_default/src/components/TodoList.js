@@ -1,4 +1,6 @@
-const { TodoItem } = window.App;
+import React from 'react';
+
+import TodoItem from './TodoItem';
 
 class TodoList extends React.Component {
   render() {
@@ -29,5 +31,3 @@ TodoList.propTypes = {
   onToggleTodo: React.PropTypes.func,
   onDeleteTodo: React.PropTypes.func
 };
-
-window.App.TodoList = TodoList;

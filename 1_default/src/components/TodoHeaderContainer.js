@@ -1,6 +1,7 @@
-const { connect } = ReactRedux;
+import React from 'react';
+import { connect } from 'react-redux';
 
-const { TodoHeader } = window.App;
+import TodoHeader from './TodoHeader';
 
 class TodoHeaderContainer extends React.Component {
   render() {
@@ -14,6 +15,6 @@ class TodoHeaderContainer extends React.Component {
   }
 }
 
-window.App.TodoHeaderContainer = connect(
+export default connect(
   (state) => ({ todos: state.todos })
 )(TodoHeaderContainer);

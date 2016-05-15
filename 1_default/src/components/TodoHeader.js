@@ -1,4 +1,6 @@
-class TodoHeader extends React.Component {
+import React from 'react';
+
+export default class TodoHeader extends React.Component {
   render() {
     const {
       title,
@@ -25,5 +27,3 @@ TodoHeader.defaultProps = {
   username: 'Guest',
   todoCount: 0
 };
-
-window.App.TodoHeader = TodoHeader;

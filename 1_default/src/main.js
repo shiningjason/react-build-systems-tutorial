@@ -1,6 +1,10 @@
-const { createStore, combineReducers, applyMiddleware } = Redux;
-const { Provider } = ReactRedux;
-const { TodoApp, reducers } = window.App;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+
+import TodoApp from './components/TodoApp';
+import reducers from './reducers';
 
 const thunkMiddleware = ({ dispatch, getState }) => {
   return (next) => (action) => {
