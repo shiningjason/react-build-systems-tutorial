@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node server.dev.js"
+    "start": "babel-node server.dev.js",
+    "build": "webpack --config ./webpack.config.prod.babel.js"
   },
   "author": "",
   "license": "MIT",
