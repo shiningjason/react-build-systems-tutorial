@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import { AppContainer } from 'react-hot-loader';
 
 import TodoApp from './components/TodoApp';
 import reducers from './reducers';
@@ -21,9 +22,35 @@ const store = createStore(
   applyMiddleware(thunkMiddleware)
 );
 
+const rootEl = document.getElementById('app');
+
 ReactDOM.render(
-  <Provider store={store}>
-    <TodoApp />
-  </Provider>,
-  document.getElementById('app')
+  <AppContainer>
+    <Provider store={store}>
+      <TodoApp />
+    </Provider>
+  </AppContainer>,
+  rootEl
 );
+
+if (module.hot) {
+  module.hot.accept(
+    './reducers',
+    () => store.replaceReducer(combineReducers(require('./reducers').default))
+  );
+
+  module.hot.accept(
+    './components/TodoApp',
+    () => {
+      const NextApp = require('./components/TodoApp').default;
+      ReactDOM.render(
+        <AppContainer>
+          <Provider store={store}>
+            <NextApp />
+          </Provider>
+        </AppContainer>,
+        rootEl
+      );
+    }
+  );
+}
