@@ -9,7 +9,9 @@
 
 ## :bowtie: 關於我
 
-目前我正在連載「[24 小時，快速入門 React](https://github.com/shiningjason1989/react-quick-tutorial)」的文字教材，如果你想學習 React/Flux/Redux/ImmuatbleJS/ES6 歡迎您前往：）如果你希望有 [綜合學習教材](https://4cats.teachable.com/courses/24hrs-react-101)，也歡迎您支持我們，目前***早鳥優惠價 50%off***。
+目前我正在連載「[24 小時，快速入門 React](https://github.com/shiningjason1989/react-quick-tutorial)」的文字教材，如果你想學習 ***React/Flux/Redux/ImmuatbleJS/ES6*** 歡迎您前往：）
+
+如果你希望有 [線上綜合教材，帶著您學習](https://4cats.teachable.com/courses/24hrs-react-101)，也歡迎您支持我們，目前***早鳥優惠價 50%off***。
 
 其他聯絡我的方式：
 
