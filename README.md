@@ -6,7 +6,7 @@
 [第一章. 當前端還沒有 Build System 時](https://github.com/shiningjason1989/react-build-systems-tutorial/tree/master/1_default)  
 [第二章. 使用 webpack 建置 Build System](https://github.com/shiningjason1989/react-build-systems-tutorial/tree/master/2_webpack)
 
-> :bowtie:：未來期望再加入 gulp/grunt/jspm/??? 等章節，盡請期待囉！^ ^
+> :loudspeaker:：未來期望再加入 gulp/grunt/jspm/??? 等章節，盡請期待囉！^ ^
 
 
 ## :bowtie: 關於我
