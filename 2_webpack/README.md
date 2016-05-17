@@ -98,4 +98,5 @@ $ npm install -S react-hot-loader@3.0.0-beta.1
 ## :rocket:
 
 ｜ :raising_hand: [我想問問題](https://github.com/shiningjason1989/react-build-systems-tutorial/issues/new) ｜
+
 ｜ [主頁](../../../) ｜ [上一章](../1_default) ｜ 完 :mortar_board: ｜
