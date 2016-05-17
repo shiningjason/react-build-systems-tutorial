@@ -15,7 +15,7 @@
 ```js
 /* a.js */
 import b from './b.js';     // 優點 1. 幫我們管理模組的依賴關係
-export default { text: b }; // 優點 2. 每個模組的變數也不會與 global 變數
+export default { text: b }; // 優點 2. 每個模組的變數也不會與 global 變數混在一起
 
 /* b.js */
 export default const b = 'hello, world';
