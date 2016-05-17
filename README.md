@@ -11,10 +11,10 @@
 
 目前我正在連載「[24 小時，快速入門 React](https://github.com/shiningjason1989/react-quick-tutorial)」的文字教材，如果你想學習 ***React/Flux/Redux/ImmuatbleJS/ES6*** 歡迎您前往：）
 
-如果你希望有 [線上綜合教材，帶著您學習](https://4cats.teachable.com/courses/24hrs-react-101)，也歡迎您支持我們，目前***早鳥優惠價 50%off***。
+如果你希望有「[線上 React 影音及文字綜合教材，帶著您學習](https://4cats.teachable.com/courses/24hrs-react-101)」，也歡迎您支持我們，目前***早鳥優惠價 50%off***。
 
-其他聯絡我的方式：
+其它聯絡我的方式：
 
 - Email: shiningjason1989@gmail.com
-- Slack: [加入 softnshare 社群](https://softnshare.slack.com/)，私訊 ***shiningjason1989***
-- [建立 issue](https://github.com/shiningjason1989/react-build-systems-tutorial/issues/new)，歡迎你在 github 上與我討論：）
+- Slack: [加入 softnshare 社群](https://softnshare.wordpress.com/slack/)，私訊 ***shiningjason1989***
+- [建立 issue](https://github.com/shiningjason1989/react-build-systems-tutorial/issues/new)，歡迎你在 github 上與我討論***任何相關問題***：）
