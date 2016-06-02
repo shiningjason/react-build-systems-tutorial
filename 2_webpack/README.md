@@ -35,7 +35,7 @@ $ npm install -D webpack webpack-dev-server
 [Babel](http://babeljs.io/) 用來將 ES6/ES7/JSX 等進階語法轉譯成 ES5，所以我們下載以下套件：
 
 ```
-$ npm install -D babel-cli babel-core babel-laoder babel-preset-es2015 babel-preset-stage-0 babel-preset-react
+$ npm install -D babel-cli babel-core babel-loader babel-preset-es2015 babel-preset-stage-0 babel-preset-react
 ```
 
 1. ***babel-cli*** 可以讓你直接下 command 執行 ES6/ES7/JSX 檔案，如：`$ babel-node source.babel.js`
